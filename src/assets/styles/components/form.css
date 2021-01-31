@@ -1,0 +1,36 @@
+.label {
+	@apply .block .uppercase .text-sm .font-bold .text-gray-700 .tracking-wide .mb-2;
+}
+.field {
+	@apply .pb-2;
+
+	&:last-child {
+		@apply .pb-0;
+	}
+}
+.input {
+	@apply .appearance-none .block .rounded .w-full .border-2 .text-gray-900 .border-gray-200 .py-2 .px-2;
+
+	&:focus, &:active {
+		@apply .outline-none .shadow-outline;
+	}
+}
+.select {
+	@apply .block .rounded .w-full .border-2 .text-gray-900 .border-gray-200 .py-2 .px-2;
+	&:focus, &:active {
+		@apply .outline-none .shadow-outline;
+	}
+}
+input[type="range"].slider {
+	@apply .appearance-none .block .bg-transparent .w-full .cursor-pointer;
+
+	&:not([orient="vertical"]) {
+		&::range-track {
+			@apply .h-4 .w-full .border .border-solid;
+		}
+		&::range-thumb {
+			@apply .appearance-none .h-6 .w-6 .-mt-1 .rounded;
+			transition: background-color 0.25s;
+		}
+	}
+}
